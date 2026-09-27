@@ -1,4 +1,4 @@
-import type { Project } from "@/data/projects";
+import type { Project } from "@/types/project";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
@@ -23,17 +23,17 @@ export default function ProjectCard({ project }: { project: Project }) {
         </div>
 
         <div className="mt-5 flex gap-4 text-sm font-medium">
-          {project.liveUrl && (
+          {project.live_url && (
             <a
-              href={project.liveUrl}
+              href={project.live_url}
               className="text-foreground underline-offset-4 hover:underline"
             >
               Live demo
             </a>
           )}
-          {project.repoUrl && (
+          {project.repo_url && (
             <a
-              href={project.repoUrl}
+              href={project.repo_url}
               className="text-zinc-600 underline-offset-4 hover:underline dark:text-zinc-400"
             >
               Source
